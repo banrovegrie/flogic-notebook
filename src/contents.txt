@@ -4,10 +4,10 @@
 #   [filename within code directory][tab character \t][subsection title]
 
 [Intro]
-template.cpp	Template
+./contents/template.cpp	Template
 
 [Data Structures]
-template.cpp	Template
+./contents/data-structures/matrix.cpp	Matrix
 
 [Dynamic Programming]
 template.cpp	Template
