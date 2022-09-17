@@ -20,12 +20,12 @@ help:
 fast: | build
 	$(LATEXCMD) content/kactl.tex </dev/null
 	cp build/kactl.pdf kactl.pdf
-	cp kactl.pdf IIITH_tesla_protocol_notebook.pdf
+	cp kactl.pdf notebook.pdf
 
 kactl: test-session.pdf | build
 	$(LATEXCMD) content/kactl.tex && $(LATEXCMD) content/kactl.tex
 	cp build/kactl.pdf kactl.pdf
-	cp kactl.pdf IIITH_tesla_protocol_notebook.pdf
+	cp kactl.pdf notebook.pdf
 
 clean:
 	cd build && rm -f kactl.aux kactl.log kactl.tmp kactl.toc kactl.pdf kactl.ptc
