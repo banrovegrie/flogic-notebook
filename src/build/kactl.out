@@ -1,0 +1,78 @@
+\BOOKMARK [0][-]{chapter.1}{Contest}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Combinatorial}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Permutations}{chapter.2}% 3
+\BOOKMARK [2][-]{subsection.2.1.1}{Factorial}{section.2.1}% 4
+\BOOKMARK [2][-]{subsection.2.1.2}{Cycles}{section.2.1}% 5
+\BOOKMARK [2][-]{subsection.2.1.3}{Derangements}{section.2.1}% 6
+\BOOKMARK [2][-]{subsection.2.1.4}{Burnside's lemma}{section.2.1}% 7
+\BOOKMARK [1][-]{section.2.2}{Partitions and subsets}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.1}{Partition function}{section.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.2}{Lucas' Theorem}{section.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.3}{Binomials}{section.2.2}% 11
+\BOOKMARK [1][-]{section.2.3}{General purpose numbers}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.3.1}{Bernoulli numbers}{section.2.3}% 13
+\BOOKMARK [2][-]{subsection.2.3.2}{Stirling numbers of the first kind}{section.2.3}% 14
+\BOOKMARK [2][-]{subsection.2.3.3}{Eulerian numbers}{section.2.3}% 15
+\BOOKMARK [2][-]{subsection.2.3.4}{Bell numbers}{section.2.3}% 16
+\BOOKMARK [2][-]{subsection.2.3.5}{Labeled unrooted trees}{section.2.3}% 17
+\BOOKMARK [2][-]{subsection.2.3.6}{Stirling numbers of the second kind}{section.2.3}% 18
+\BOOKMARK [2][-]{subsection.2.3.7}{Catalan numbers}{section.2.3}% 19
+\BOOKMARK [1][-]{section.2.4}{DP Optimizations}{chapter.2}% 20
+\BOOKMARK [0][-]{chapter.3}{Numerical}{}% 21
+\BOOKMARK [1][-]{section.3.1}{Polynomials and recurrences}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.2}{Optimization}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.3}{Matrices}{chapter.3}% 24
+\BOOKMARK [1][-]{section.3.4}{Fourier transforms}{chapter.3}% 25
+\BOOKMARK [0][-]{chapter.4}{Number theory}{}% 26
+\BOOKMARK [1][-]{section.4.1}{Modular arithmetic}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.2}{Primality}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.3}{Divisibility}{chapter.4}% 29
+\BOOKMARK [2][-]{subsection.4.3.1}{B\351zout's identity}{section.4.3}% 30
+\BOOKMARK [1][-]{section.4.4}{Fractions}{chapter.4}% 31
+\BOOKMARK [1][-]{section.4.5}{Pythagorean Triples}{chapter.4}% 32
+\BOOKMARK [1][-]{section.4.6}{Primes}{chapter.4}% 33
+\BOOKMARK [1][-]{section.4.7}{Estimates}{chapter.4}% 34
+\BOOKMARK [1][-]{section.4.8}{Mobius Function}{chapter.4}% 35
+\BOOKMARK [0][-]{chapter.5}{Data structures}{}% 36
+\BOOKMARK [1][-]{section.5.1}{Set and Map like}{chapter.5}% 37
+\BOOKMARK [1][-]{section.5.2}{Matrix}{chapter.5}% 38
+\BOOKMARK [1][-]{section.5.3}{Range DS}{chapter.5}% 39
+\BOOKMARK [0][-]{chapter.6}{Strings}{}% 40
+\BOOKMARK [1][-]{section.6.1}{String Matching}{chapter.6}% 41
+\BOOKMARK [1][-]{section.6.2}{Palindromes}{chapter.6}% 42
+\BOOKMARK [1][-]{section.6.3}{Suffix DS}{chapter.6}% 43
+\BOOKMARK [0][-]{chapter.7}{Graph}{}% 44
+\BOOKMARK [1][-]{section.7.1}{Network flow}{chapter.7}% 45
+\BOOKMARK [1][-]{section.7.2}{Matching}{chapter.7}% 46
+\BOOKMARK [1][-]{section.7.3}{DFS algorithms}{chapter.7}% 47
+\BOOKMARK [1][-]{section.7.4}{Coloring}{chapter.7}% 48
+\BOOKMARK [1][-]{section.7.5}{Heuristics}{chapter.7}% 49
+\BOOKMARK [1][-]{section.7.6}{Trees}{chapter.7}% 50
+\BOOKMARK [1][-]{section.7.7}{Math}{chapter.7}% 51
+\BOOKMARK [0][-]{chapter.8}{Geometry}{}% 52
+\BOOKMARK [1][-]{section.8.1}{Geometric primitives}{chapter.8}% 53
+\BOOKMARK [1][-]{section.8.2}{Circles}{chapter.8}% 54
+\BOOKMARK [1][-]{section.8.3}{Polygons}{chapter.8}% 55
+\BOOKMARK [1][-]{section.8.4}{Misc. Point Set Problems}{chapter.8}% 56
+\BOOKMARK [1][-]{section.8.5}{3D}{chapter.8}% 57
+\BOOKMARK [0][-]{chapter.9}{Mathematics}{}% 58
+\BOOKMARK [1][-]{section.9.1}{Equations}{chapter.9}% 59
+\BOOKMARK [1][-]{section.9.2}{Recurrences}{chapter.9}% 60
+\BOOKMARK [1][-]{section.9.3}{Trigonometry}{chapter.9}% 61
+\BOOKMARK [1][-]{section.9.4}{Geometry}{chapter.9}% 62
+\BOOKMARK [2][-]{subsection.9.4.1}{Triangles}{section.9.4}% 63
+\BOOKMARK [2][-]{subsection.9.4.2}{Quadrilaterals}{section.9.4}% 64
+\BOOKMARK [2][-]{subsection.9.4.3}{Spherical coordinates}{section.9.4}% 65
+\BOOKMARK [1][-]{section.9.5}{Derivatives/Integrals}{chapter.9}% 66
+\BOOKMARK [1][-]{section.9.6}{Sums}{chapter.9}% 67
+\BOOKMARK [1][-]{section.9.7}{Series}{chapter.9}% 68
+\BOOKMARK [1][-]{section.9.8}{Probability theory}{chapter.9}% 69
+\BOOKMARK [2][-]{subsection.9.8.1}{Discrete distributions}{section.9.8}% 70
+\BOOKMARK [2][-]{subsection.9.8.2}{Continuous distributions}{section.9.8}% 71
+\BOOKMARK [1][-]{section.9.9}{Markov chains}{chapter.9}% 72
+\BOOKMARK [0][-]{chapter.10}{Miscellaneous}{}% 73
+\BOOKMARK [1][-]{section.10.1}{RNG, Intervals, Ternary Search}{chapter.10}% 74
+\BOOKMARK [1][-]{section.10.2}{Debugging tricks}{chapter.10}% 75
+\BOOKMARK [1][-]{section.10.3}{Optimization tricks}{chapter.10}% 76
+\BOOKMARK [2][-]{subsection.10.3.1}{Bit hacks}{section.10.3}% 77
+\BOOKMARK [2][-]{subsection.10.3.2}{Pragmas}{section.10.3}% 78
