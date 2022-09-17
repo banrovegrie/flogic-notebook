@@ -1,4 +1,4 @@
-This is the ICPC Notebook Template for IIITH team `Fuck Logic`.
+This is the ICPC 2021 Notebook Template for IIITH team `Fuck Logic`.
 
 Team Members:
 1. Amul Agrawal (Amul)
