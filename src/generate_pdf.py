@@ -2,7 +2,7 @@
 import subprocess
 code_dir = "./"
 title = "Fuck Logic ICPC Team Notebook"
-file = 'basics.txt'
+file = 'contents.txt'
 
 def get_sections():
     sections = []
