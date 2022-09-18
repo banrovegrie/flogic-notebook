@@ -1,0 +1,20 @@
+# Fdb version 3
+["pdflatex"] 1663487465 "/home/alapan/Documents/Projects/kactl/content/kactl.tex" "/home/alapan/Documents/Projects/kactl/content/kactl.pdf" "kactl" 1663487465
+  "/etc/texmf/web2c/texmf.cnf" 1619659586 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/home/alapan/Documents/Projects/kactl/content/kactl.aux" 1663487465 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/home/alapan/Documents/Projects/kactl/content/kactl.tex" 1663487465 1156 b828df358025cdf0a238af05b01b8dee ""
+  "/home/alapan/Documents/Projects/kactl/content/kactlpkg.sty" 0 -1 0 ""
+  "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr9.tfm" 1136768653 1292 6b21b9c2c7bebb38aa2273f7ca0fb3af ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/exscale.sty" 1580683321 2582 740b94c0cd36fe969fdd17c721f35f3d ""
+  "/usr/share/texlive/texmf-dist/tex/latex/extsizes/extreport.cls" 1137110130 23786 cbd79291aa0922c48a73753b97cabb5f ""
+  "/usr/share/texlive/texmf-dist/tex/latex/extsizes/size9.clo" 1137110130 6172 b9daf86befd6903b2699dddbd6fb97c1 ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1644306331 4791331 c757d529d983f5f150e75fd42b7c6b6c ""
+  "kactl.tex" 1663487465 1156 b828df358025cdf0a238af05b01b8dee ""
+  "kactlpkg.sty" 0 -1 0 ""
+  (generated)
+  "/home/alapan/Documents/Projects/kactl/content/kactl.pdf"
+  "kactl.log"
+  "/home/alapan/Documents/Projects/kactl/content/kactl.log"
