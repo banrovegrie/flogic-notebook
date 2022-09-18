@@ -15,11 +15,11 @@
 
 typedef Point<int> P;
 vector<array<int, 3>> manhattanMST(vector<P> ps) {
-	VI id(SZ(ps));
-	iota(ALL(id), 0);
+	vi id(sz(ps));
+	iota(all(id), 0);
 	vector<array<int, 3>> edges;
-	REP(k,0,4) {
-		sort(ALL(id), [&](int i, int j) {
+	rep(k,0,4) {
+		sort(all(id), [&](int i, int j) {
 		     return (ps[i]-ps[j]).x < (ps[j]-ps[i]).y;});
 		map<int, int> sweep;
 		for (int i : id) {

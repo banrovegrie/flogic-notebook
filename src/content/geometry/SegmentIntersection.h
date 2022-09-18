@@ -15,7 +15,7 @@ Products of three coordinates are used in intermediate steps so watch out for ov
 \end{minipage}
  * Usage:
  * vector<P> inter = segInter(s1,e1,s2,e2);
- * if (SZ(inter)==1)
+ * if (sz(inter)==1)
  *   cout << "segments intersect at " << inter[0] << endl;
  * Status: stress-tested, tested on kattis:intersection
  */
@@ -35,5 +35,5 @@ template<class P> vector<P> segInter(P a, P b, P c, P d) {
 	if (onSegment(c, d, b)) s.insert(b);
 	if (onSegment(a, b, c)) s.insert(c);
 	if (onSegment(a, b, d)) s.insert(d);
-	return {ALL(s)};
+	return {all(s)};
 }

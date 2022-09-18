@@ -24,7 +24,7 @@
 #define cmp(i,j) sgn(dir.perp().cross(poly[(i)%n]-poly[(j)%n]))
 #define extr(i) cmp(i + 1, i) >= 0 && cmp(i, i - 1 + n) < 0
 template <class P> int extrVertex(vector<P>& poly, P dir) {
-	int n = SZ(poly), lo = 0, hi = n;
+	int n = sz(poly), lo = 0, hi = n;
 	if (extr(0)) return 0;
 	while (lo + 1 < hi) {
 		int m = (lo + hi) / 2;
@@ -43,8 +43,8 @@ array<int, 2> lineHull(P a, P b, vector<P>& poly) {
 	if (cmpL(endA) < 0 || cmpL(endB) > 0)
 		return {-1, -1};
 	array<int, 2> res;
-	REP(i,0,2) {
-		int lo = endB, hi = endA, n = SZ(poly);
+	rep(i,0,2) {
+		int lo = endB, hi = endA, n = sz(poly);
 		while ((lo + 1) % n != hi) {
 			int m = ((lo + hi + (lo < hi ? 0 : n)) / 2) % n;
 			(cmpL(m) == cmpL(endB) ? lo : hi) = m;
@@ -54,7 +54,7 @@ array<int, 2> lineHull(P a, P b, vector<P>& poly) {
 	}
 	if (res[0] == res[1]) return {res[0], -1};
 	if (!cmpL(res[0]) && !cmpL(res[1]))
-		switch ((res[0] - res[1] + SZ(poly) + 1) % SZ(poly)) {
+		switch ((res[0] - res[1] + sz(poly) + 1) % sz(poly)) {
 			case 0: return {res[0], res[0]};
 			case 2: return {res[1], res[1]};
 		}

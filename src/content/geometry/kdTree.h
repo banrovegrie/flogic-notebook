@@ -34,10 +34,10 @@ struct Node {
 		}
 		if (vp.size() > 1) {
 			// split on x if width >= height (not ideal...)
-			sort(ALL(vp), x1 - x0 >= y1 - y0 ? on_x : on_y);
+			sort(all(vp), x1 - x0 >= y1 - y0 ? on_x : on_y);
 			// divide by taking half the array for each child (not
 			// best performance with many duplicates in the middle)
-			int half = SZ(vp)/2;
+			int half = sz(vp)/2;
 			first = new Node({vp.begin(), vp.begin() + half});
 			second = new Node({vp.begin() + half, vp.end()});
 		}
@@ -46,7 +46,7 @@ struct Node {
 
 struct KDTree {
 	Node* root;
-	KDTree(const vector<P>& vp) : root(new Node({ALL(vp)})) {}
+	KDTree(const vector<P>& vp) : root(new Node({all(vp)})) {}
 
 	pair<T, P> search(Node *node, const P& p) {
 		if (!node->first) {

@@ -37,7 +37,7 @@ bool circ(P p, P a, P b, P c) { // is p in the circumcircle?
 Q makeEdge(P orig, P dest) {
 	Q r = H ? H : new Quad{new Quad{new Quad{new Quad{0}}}};
 	H = r->o; r->r()->r() = r;
-	REP(i,0,4) r = r->rot, r->p = arb, r->o = i & 1 ? r : r->r();
+	rep(i,0,4) r = r->rot, r->p = arb, r->o = i & 1 ? r : r->r();
 	r->p = orig; r->F() = dest;
 	return r;
 }
@@ -52,9 +52,9 @@ Q connect(Q a, Q b) {
 }
 
 pair<Q,Q> rec(const vector<P>& s) {
-	if (SZ(s) <= 3) {
+	if (sz(s) <= 3) {
 		Q a = makeEdge(s[0], s[1]), b = makeEdge(s[1], s.back());
-		if (SZ(s) == 2) return { a, a->r() };
+		if (sz(s) == 2) return { a, a->r() };
 		splice(a->r(), b);
 		auto side = s[0].cross(s[1], s[2]);
 		Q c = side ? connect(b, a) : 0;
@@ -64,9 +64,9 @@ pair<Q,Q> rec(const vector<P>& s) {
 #define H(e) e->F(), e->p
 #define valid(e) (e->F().cross(H(base)) > 0)
 	Q A, B, ra, rb;
-	int half = SZ(s) / 2;
-	tie(ra, A) = rec({ALL(s) - half});
-	tie(B, rb) = rec({SZ(s) - half + ALL(s)});
+	int half = sz(s) / 2;
+	tie(ra, A) = rec({all(s) - half});
+	tie(B, rb) = rec({sz(s) - half + all(s)});
 	while ((B->p.cross(H(A)) < 0 && (A = A->next())) ||
 	       (A->p.cross(H(B)) > 0 && (B = B->r()->o)));
 	Q base = connect(B->r(), A);
@@ -92,8 +92,8 @@ pair<Q,Q> rec(const vector<P>& s) {
 }
 
 vector<P> triangulate(vector<P> pts) {
-	sort(ALL(pts));  assert(unique(ALL(pts)) == pts.end());
-	if (SZ(pts) < 2) return {};
+	sort(all(pts));  assert(unique(all(pts)) == pts.end());
+	if (sz(pts) < 2) return {};
 	Q e = rec(pts).first;
 	vector<Q> q = {e};
 	int qi = 0;
@@ -101,6 +101,6 @@ vector<P> triangulate(vector<P> pts) {
 #define ADD { Q c = e; do { c->mark = 1; pts.push_back(c->p); \
 	q.push_back(c->r()); c = c->next(); } while (c != e); }
 	ADD; pts.clear();
-	while (qi < SZ(q)) if (!(e = q[qi++])->mark) ADD;
+	while (qi < sz(q)) if (!(e = q[qi++])->mark) ADD;
 	return pts;
 }

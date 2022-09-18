@@ -1,4 +1,31 @@
 \contentsline {chapter}{\numberline {1}Contest}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Data structures}{1}{chapter.2}%
 \contentsline {chapter}{\numberline {3}Strings}{2}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Mathematics}{3}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Equations}{3}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Recurrences}{3}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Trigonometry}{3}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Geometry}{3}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Triangles}{3}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Quadrilaterals}{4}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Spherical coordinates}{4}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Derivatives/Integrals}{4}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Sums}{4}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Series}{4}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Probability theory}{4}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Discrete distributions}{4}{subsection.4.8.1}%
+\contentsline {subsubsection}{Binomial distribution}{4}{section*.1}%
+\contentsline {subsubsection}{First success distribution}{4}{section*.2}%
+\contentsline {subsubsection}{Poisson distribution}{4}{section*.3}%
+\contentsline {subsection}{\numberline {4.8.2}Continuous distributions}{4}{subsection.4.8.2}%
+\contentsline {subsubsection}{Uniform distribution}{4}{section*.4}%
+\contentsline {subsubsection}{Exponential distribution}{4}{section*.5}%
+\contentsline {subsubsection}{Normal distribution}{4}{section*.6}%
+\contentsline {section}{\numberline {4.9}Markov chains}{5}{section.4.9}%
+\contentsline {chapter}{\numberline {5}Geometry}{5}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Geometric primitives}{5}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Circles}{6}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Polygons}{6}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Misc. Point Set Problems}{7}{section.5.4}%
+\contentsline {section}{\numberline {5.5}3D}{8}{section.5.5}%
 \contentsfinish 
