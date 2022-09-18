@@ -13,18 +13,18 @@
 #include "FenwickTree.h"
 
 struct FT2 {
-	vector<VI> ys; vector<FT> ft;
+	vector<vi> ys; vector<FT> ft;
 	FT2(int limx) : ys(limx) {}
 	void fakeUpdate(int x, int y) {
-		for (; x < SZ(ys); x |= x + 1) ys[x].push_back(y);
+		for (; x < sz(ys); x |= x + 1) ys[x].push_back(y);
 	}
 	void init() {
-		for (VI& v : ys) sort(ALL(v)), ft.emplace_back(SZ(v));
+		for (vi& v : ys) sort(all(v)), ft.emplace_back(sz(v));
 	}
 	int ind(int x, int y) {
-		return (int)(lower_bound(ALL(ys[x]), y) - ys[x].begin()); }
+		return (int)(lower_bound(all(ys[x]), y) - ys[x].begin()); }
 	void update(int x, int y, ll dif) {
-		for (; x < SZ(ys); x |= x + 1)
+		for (; x < sz(ys); x |= x + 1)
 			ft[x].update(ind(x, y), dif);
 	}
 	ll query(int x, int y) {

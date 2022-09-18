@@ -1,4 +1,0 @@
-BasedOnStyle: LLVM
-AllowShortIfStatementsOnASingleLine: WithoutElse
-AllowShortLoopsOnASingleLine: true
-AlwaysBreakTemplateDeclarations: true
