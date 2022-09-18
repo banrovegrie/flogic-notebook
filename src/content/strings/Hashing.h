@@ -29,7 +29,7 @@ struct HashInterval {
 	vector<H> ha, pw;
 	HashInterval(string& str) : ha(SZ(str)+1), pw(ha) {
 		pw[0] = 1;
-		REP(i,0,SZ(str))
+		rep(i,0,sz(str))
 			ha[i+1] = ha[i] * C + str[i],
 			pw[i+1] = pw[i] * C;
 	}
