@@ -1,8 +1,8 @@
 /**
  * Author: Amul Agrawal
  * Date: 2022-09-18
- * Description: DSU with rollback
- * Time: $O(\alpha(N))$
+ * Description: Minimum Queue Applications
+ * Time: $O(1)$ push pop etc.
  */
 #pragma once
 

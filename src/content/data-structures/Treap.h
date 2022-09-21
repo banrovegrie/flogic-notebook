@@ -3,7 +3,7 @@
  * Date: 2022-09-18
  * Description: cutting and moving array. everything is [l, r]
  *	0 based indexing. 
- * Time: O(logN)
+ * Time: O(\log N)
  * Usage: Treap<int> tr(arr); 
  */
 #pragma once

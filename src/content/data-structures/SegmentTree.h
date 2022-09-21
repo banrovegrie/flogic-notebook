@@ -2,7 +2,7 @@
  * Author: Amul Agrawal
  * Date: 2022-09-18
  * Description: RMQ SegTree
- * Time: $O(\alpha(N))$
+ * Time: $O(\log(N))$
  */
 #pragma once
 const ll INF = 1e18;

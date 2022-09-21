@@ -1,8 +1,9 @@
 /**
  * Author: Amul Agrawal
  * Date: 2022-09-18
- * Description: DSU with rollback
- * Time: $O(\alpha(N))$
+ * Description: Segment Tree based on large [L, R] range
+ *(includes range updates) 
+ * Time: $O(\log(R - L))$ in addition and deletion
  */
 #pragma once
 

@@ -1,31 +1,31 @@
 \contentsline {chapter}{\numberline {1}Contest}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Data structures}{1}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Strings}{3}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Mathematics}{4}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Equations}{4}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Recurrences}{4}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Trigonometry}{4}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Geometry}{4}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Triangles}{4}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Quadrilaterals}{4}{subsection.4.4.2}%
+\contentsline {chapter}{\numberline {3}Strings}{4}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Mathematics}{5}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Equations}{5}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Recurrences}{5}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Trigonometry}{5}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Geometry}{5}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Triangles}{5}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Quadrilaterals}{5}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}Spherical coordinates}{5}{subsection.4.4.3}%
 \contentsline {section}{\numberline {4.5}Derivatives/Integrals}{5}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Sums}{5}{section.4.6}%
 \contentsline {section}{\numberline {4.7}Series}{5}{section.4.7}%
-\contentsline {section}{\numberline {4.8}Probability theory}{5}{section.4.8}%
-\contentsline {subsection}{\numberline {4.8.1}Discrete distributions}{5}{subsection.4.8.1}%
-\contentsline {subsubsection}{Binomial distribution}{5}{section*.1}%
-\contentsline {subsubsection}{First success distribution}{5}{section*.2}%
-\contentsline {subsubsection}{Poisson distribution}{5}{section*.3}%
-\contentsline {subsection}{\numberline {4.8.2}Continuous distributions}{5}{subsection.4.8.2}%
-\contentsline {subsubsection}{Uniform distribution}{5}{section*.4}%
-\contentsline {subsubsection}{Exponential distribution}{5}{section*.5}%
-\contentsline {subsubsection}{Normal distribution}{5}{section*.6}%
-\contentsline {section}{\numberline {4.9}Markov chains}{5}{section.4.9}%
+\contentsline {section}{\numberline {4.8}Probability theory}{6}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Discrete distributions}{6}{subsection.4.8.1}%
+\contentsline {subsubsection}{Binomial distribution}{6}{section*.1}%
+\contentsline {subsubsection}{First success distribution}{6}{section*.2}%
+\contentsline {subsubsection}{Poisson distribution}{6}{section*.3}%
+\contentsline {subsection}{\numberline {4.8.2}Continuous distributions}{6}{subsection.4.8.2}%
+\contentsline {subsubsection}{Uniform distribution}{6}{section*.4}%
+\contentsline {subsubsection}{Exponential distribution}{6}{section*.5}%
+\contentsline {subsubsection}{Normal distribution}{6}{section*.6}%
+\contentsline {section}{\numberline {4.9}Markov chains}{6}{section.4.9}%
 \contentsline {chapter}{\numberline {5}Geometry}{6}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Geometric primitives}{6}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Circles}{7}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Polygons}{7}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Misc. Point Set Problems}{8}{section.5.4}%
-\contentsline {section}{\numberline {5.5}3D}{9}{section.5.5}%
+\contentsline {section}{\numberline {5.3}Polygons}{8}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Misc. Point Set Problems}{9}{section.5.4}%
+\contentsline {section}{\numberline {5.5}3D}{10}{section.5.5}%
 \contentsfinish 
