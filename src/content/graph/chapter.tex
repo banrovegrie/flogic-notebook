@@ -1,32 +1,26 @@
 \chapter{Graph}
 
-% \section{Fundamentals}
-	% \kactlimport{BellmanFord.h}
-	% \kactlimport{FloydWarshall.h}
-	% \kactlimport{TopoSort.h}
+\section{Fundamentals}
+	\kactlimport{BellmanFord.h}
+	\kactlimport{FloydWarshall.h}
 
 \section{Network flow}
 	\kactlimport{Dinic.h}
-	% \kactlimport{PushRelabel.h}
-	% \kactlimport{EdmondsKarp.h}
-	\kactlimport{MCMF-SPFA.h}
-	\kactlimport{MinCostMaxFlow.h}
-	% \kactlimport{MinCut.h}
+	\kactlimport{MinCut.h}
 	\kactlimport{GlobalMinCut.h}
-	\kactlimport{GomoryHu.h}
+	\kactlimport{MinCostMaxFlow.h}
 
 \section{Matching}
-	% \kactlimport{hopcroftKarp.h}
-	% \kactlimport{DFSMatching.h}
+	\kactlimport{hopcroftKarp.h}
 	\kactlimport{MinimumVertexCover.h}
 	\kactlimport{WeightedMatching.h}
-	\kactlimport{GeneralMatching.h}
 
 \section{DFS algorithms}
-	\kactlimport{SCC.h}
-	\kactlimport{BiconnectedComponents.h}
 	\kactlimport{2sat.h}
 	\kactlimport{EulerWalk.h}
+	\kactlimport{CondensationGraph.h}
+	\kactlimport{BridgeTree.h}
+% TODO: Block Cut Tree
 
 \section{Coloring}
 	\kactlimport{EdgeColoring.h}
@@ -39,16 +33,18 @@
 \section{Trees}
 	\kactlimport{BinaryLifting.h}
 	\kactlimport{LCA.h}
-	\kactlimport{CompressTree.h}
-	\kactlimport{HLD.h}
 	\kactlimport{LinkCutTree.h}
-	\kactlimport{DirectedMST.h}
+% 	\kactlimport{CompressTree.h}
+% 	\kactlimport{HLD.h}
+% 	\kactlimport{DirectedMST.h}
+% TODO: add Centroid Decomposition
+% TODO: Blossom
 
 \section{Math}
 \textbf{Number of Spanning Trees}
 % I.e. matrix-tree theorem.
-% Source: https://en.wikipedia.org/wiki/Kirchhoff%27s_theorem
-% Test: stress-tests/graph/matrix-tree.cpp
+% % Source: https://en.wikipedia.org/wiki/Kirchhoff%27s_theorem
+% % Test: stress-tests/graph/matrix-tree.cpp
 Create an $N\times N$ matrix \texttt{mat}, and for each edge $a \rightarrow b \in G$, do
 \texttt{mat[a][b]--, mat[b][b]++} (and \texttt{mat[b][a]--, mat[a][a]++} if $G$ is undirected).
 Remove the $i$th row and column and take the determinant; this yields the number of directed spanning trees rooted at $i$

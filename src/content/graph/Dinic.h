@@ -3,41 +3,53 @@
  * Date: 2019-04-26
  * License: CC0
  * Source: https://cp-algorithms.com/graph/dinic.html
- * Description: Flow algorithm with complexity $O(VE\log U)$ where $U = \max |\text{cap}|$.
- * $O(\min(E^{1/2}, V^{2/3})E)$ if $U = 1$; $O(\sqrt{V}E)$ for bipartite matching.
+ * Description: Complexity: (1) O(V^2*E): General (2) O(Flow * E): General
+ * (3) O(E*root(V)): when sum of edge capacities is O(n), we can treat edge 
+ *	with weight x as x edges with weight 1.
+ * (4) O(E*V*log(Flow)): Dinics with scaling
  * Status: Tested on SPOJ FASTFLOW and SPOJ MATCHING, stress-tested
  */
 #pragma once
 
-struct Dinic {
+const int INF = 1e9 + 13;
+template<class T = long long>
+class Dinic {
+	// {to: to, rev: reverse_edge_id, c: cap, oc: original cap}
 	struct Edge {
 		int to, rev;
-		ll c, oc;
-		ll flow() { return max(oc - c, 0LL); } // if you need flows
+		T c, oc;
+		T flow() { return max(oc - c, (T)0); } // if you need flows
 	};
-	VI lvl, ptr, q;
-	vector<vector<Edge>> adj;
-	Dinic(int n) : lvl(n), ptr(n), q(n), adj(n) {}
-	void addEdge(int a, int b, ll c, ll rcap = 0) {
-		adj[a].push_back({b, SZ(adj[b]), c, c});
-		adj[b].push_back({a, SZ(adj[a]) - 1, rcap, rcap});
+	int N;
+	vector<int> lvl, ptr, q; vector<vector<Edge>> adj;
+public:
+	vector<vector<T>> Flow;
+	Dinic(int n) {
+		N = n; Flow.assign(n, vector<T>(n, (T)0));
+		lvl.resize(n); adj.resize(n); ptr.resize(n); q.resize(n);
 	}
-	ll dfs(int v, int t, ll f) {
+	// automatically adds a reversed edge
+	void addEdge(int a, int b, T c, T rcap = 0) {
+		adj[a].push_back({b, sz(adj[b]), c, c});
+		adj[b].push_back({a, sz(adj[a]) - 1, rcap, rcap});
+	}
+	T dfs(int v, int t, T f) {
 		if (v == t || !f) return f;
-		for (int& i = ptr[v]; i < SZ(adj[v]); i++) {
+		for (int& i = ptr[v]; i < sz(adj[v]); i++) {
 			Edge& e = adj[v][i];
 			if (lvl[e.to] == lvl[v] + 1)
-				if (ll p = dfs(e.to, t, min(f, e.c))) {
+				if (T p = dfs(e.to, t, min(f, e.c))) {
 					e.c -= p, adj[e.to][e.rev].c += p;
 					return p;
 				}
 		}
 		return 0;
 	}
-	ll calc(int s, int t) {
-		ll flow = 0; q[0] = s;
-		REP(L,0,31) do { // 'int L=30' maybe faster for random data
-			lvl = ptr = VI(SZ(q));
+	T calc(int s, int t) {	
+		T flow = 0; q[0] = s;
+		// bfs part, setting the lvl here
+		for(int L = 0; L < 31; L++) do { // 'int L=30' maybe faster for random data
+			lvl = ptr = vector<int>(sz(q));
 			int qi = 0, qe = lvl[s] = 1;
 			while (qi < qe && !lvl[t]) {
 				int v = q[qi++];
@@ -45,9 +57,18 @@ struct Dinic {
 					if (!lvl[e.to] && e.c >> (30 - L))
 						q[qe++] = e.to, lvl[e.to] = lvl[v] + 1;
 			}
-			while (ll p = dfs(s, t, LLONG_MAX)) flow += p;
+			// dfs part, setting ptr and checking for a path.
+			while (T p = dfs(s, t, INF)) flow += p;
 		} while (lvl[t]);
 		return flow;
 	}
 	bool leftOfMinCut(int a) { return lvl[a] != 0; }
+	void buildFlow() {
+		for(int i=0;i<N;i++) {
+			for(auto e : adj[i]) {
+				int j = e.to;
+				Flow[i][j] = e.flow();
+			}
+		}
+	}
 };

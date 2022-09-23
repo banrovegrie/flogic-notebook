@@ -9,15 +9,14 @@
  */
 #pragma once
 
-#include "DFSMatching.h"
-
-VI cover(vector<VI>& g, int n, int m) {
-	VI match(m, -1);
-	int res = dfsMatching(g, match);
+#include "hopcroftKarp.h"
+vi cover(vector<vi>& g, int n, int m) {
+	vi match(m, -1);
+	int res = hopcroftKarp(g, match);
 	vector<bool> lfound(n, true), seen(m);
 	for (int it : match) if (it != -1) lfound[it] = false;
-	VI q, cover;
-	REP(i,0,n) if (lfound[i]) q.push_back(i);
+	vi q, cover;
+	rep(i,0,n) if (lfound[i]) q.push_back(i);
 	while (!q.empty()) {
 		int i = q.back(); q.pop_back();
 		lfound[i] = 1;
@@ -26,8 +25,8 @@ VI cover(vector<VI>& g, int n, int m) {
 			q.push_back(match[e]);
 		}
 	}
-	REP(i,0,n) if (!lfound[i]) cover.push_back(i);
-	REP(i,0,m) if (seen[i]) cover.push_back(n+i);
-	assert(SZ(cover) == res);
+	rep(i,0,n) if (!lfound[i]) cover.push_back(i);
+	rep(i,0,m) if (seen[i]) cover.push_back(n+i);
+	assert(sz(cover) == res);
 	return cover;
 }

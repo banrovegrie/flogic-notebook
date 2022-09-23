@@ -8,13 +8,9 @@
  * representing the maximal clique.
  * Time: O(3^{n/3}), much faster for sparse graphs
  * Status: stress-tested
+ * Usage: cliques(eds, [&](B nodes){// operate on nodes here});
  */
 #pragma once
-/// Possible optimization: on the top-most
-/// recursion level, ignore 'cands', and go through nodes in order of increasing
-/// degree, where degrees go down as nodes are removed.
-/// (mostly irrelevant given MaximumClique)
-
 typedef bitset<128> B;
 template<class F>
 void cliques(vector<B>& eds, F f, B P = ~B(), B X={}, B R={}) {

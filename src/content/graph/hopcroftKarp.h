@@ -14,7 +14,7 @@
  */
 #pragma once
 
-bool dfs(int a, int L, vector<VI>& g, VI& btoa, VI& A, VI& B) {
+bool dfs(int a, int L, vector<vi>& g, vi& btoa, vi& A, vi& B) {
 	if (A[a] != L) return 0;
 	A[a] = -1;
 	for (int b : g[a]) if (B[b] == L + 1) {
@@ -25,16 +25,16 @@ bool dfs(int a, int L, vector<VI>& g, VI& btoa, VI& A, VI& B) {
 	return 0;
 }
 
-int hopcroftKarp(vector<VI>& g, VI& btoa) {
+int hopcroftKarp(vector<vi>& g, vi& btoa) {
 	int res = 0;
-	VI A(g.size()), B(btoa.size()), cur, next;
+	vi A(g.size()), B(btoa.size()), cur, next;
 	for (;;) {
-		fill(ALL(A), 0);
-		fill(ALL(B), 0);
+		fill(all(A), 0);
+		fill(all(B), 0);
 		/// Find the starting nodes for BFS (i.e. layer 0).
 		cur.clear();
 		for (int a : btoa) if(a != -1) A[a] = -1;
-		REP(a,0,SZ(g)) if(A[a] == 0) cur.push_back(a);
+		rep(a,0,sz(g)) if(A[a] == 0) cur.push_back(a);
 		/// Find all layers using bfs.
 		for (int lay = 1;; lay++) {
 			bool islast = 0;
@@ -55,7 +55,8 @@ int hopcroftKarp(vector<VI>& g, VI& btoa) {
 			cur.swap(next);
 		}
 		/// Use DFS to scan for augmenting paths.
-		REP(a,0,SZ(g))
+		rep(a,0,sz(g))
 			res += dfs(a, 0, g, btoa, A, B);
 	}
+	return sz(btoa) - (int)count(all(btoa), -1);
 }

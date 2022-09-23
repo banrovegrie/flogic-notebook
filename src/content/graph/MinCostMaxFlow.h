@@ -17,11 +17,11 @@ typedef vector<ll> VL;
 
 struct MCMF {
 	int N;
-	vector<VI> ed, red;
+	vector<vi> ed, red;
 	vector<VL> cap, flow, cost;
-	VI seen;
+	vi seen;
 	VL dist, pi;
-	vector<PII> par;
+	vector<pii> par;
 
 	MCMF(int N) :
 		N(N), ed(N), red(N), cap(N, VL(N)), flow(cap), cost(cap),
@@ -35,8 +35,8 @@ struct MCMF {
 	}
 
 	void path(int s) {
-		fill(ALL(seen), 0);
-		fill(ALL(dist), INF);
+		fill(all(seen), 0);
+		fill(all(dist), INF);
 		dist[s] = 0; ll di;
 
 		__gnu_pbds::priority_queue<pair<ll, int>> q;
@@ -61,7 +61,7 @@ struct MCMF {
 			for (int i : red[s]) if (!seen[i])
 				relax(i, flow[i][s], -cost[i][s], 0);
 		}
-		REP(i,0,N) pi[i] = min(pi[i] + dist[i], INF);
+		rep(i,0,N) pi[i] = min(pi[i] + dist[i], INF);
 	}
 
 	pair<ll, ll> maxflow(int s, int t) {
@@ -75,16 +75,16 @@ struct MCMF {
 				if (r) flow[p][x] += fl;
 				else flow[x][p] -= fl;
 		}
-		REP(i,0,N) REP(j,0,N) totcost += cost[i][j] * flow[i][j];
+		rep(i,0,N) rep(j,0,N) totcost += cost[i][j] * flow[i][j];
 		return {totflow, totcost};
 	}
 
 	// If some costs can be negative, call this before maxflow:
 	void setpi(int s) { // (otherwise, leave this out)
-		fill(ALL(pi), INF); pi[s] = 0;
+		fill(all(pi), INF); pi[s] = 0;
 		int it = N, ch = 1; ll v;
 		while (ch-- && it--)
-			REP(i,0,N) if (pi[i] != INF)
+			rep(i,0,N) if (pi[i] != INF)
 				for (int to : ed[i]) if (cap[i][to])
 					if ((v = pi[i] + cost[i][to]) < pi[to])
 						pi[to] = v, ch = 1;

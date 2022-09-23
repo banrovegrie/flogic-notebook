@@ -35,16 +35,16 @@ Node *merge(Node *a, Node *b) {
 }
 void pop(Node*& a) { a->prop(); a = merge(a->l, a->r); }
 
-pair<ll, VI> dmst(int n, int r, vector<Edge>& g) {
+pair<ll, vi> dmst(int n, int r, vector<Edge>& g) {
 	RollbackUF uf(n);
 	vector<Node*> heap(n);
 	for (Edge e : g) heap[e.b] = merge(heap[e.b], new Node{e});
 	ll res = 0;
-	VI seen(n, -1), path(n), par(n);
+	vi seen(n, -1), path(n), par(n);
 	seen[r] = r;
 	vector<Edge> Q(n), in(n, {-1,-1}), comp;
 	deque<tuple<int, int, vector<Edge>>> cycs;
-	REP(s,0,n) {
+	rep(s,0,n) {
 		int u = s, qi = 0, w;
 		while (seen[u] < 0) {
 			if (!heap[u]) return {-1,{}};
@@ -61,7 +61,7 @@ pair<ll, VI> dmst(int n, int r, vector<Edge>& g) {
 				cycs.push_front({u, time, {&Q[qi], &Q[end]}});
 			}
 		}
-		REP(i,0,qi) in[uf.find(Q[i].b)] = Q[i];
+		rep(i,0,qi) in[uf.find(Q[i].b)] = Q[i];
 	}
 
 	for (auto& [u,t,comp] : cycs) { // restore sol (optional)
@@ -70,6 +70,6 @@ pair<ll, VI> dmst(int n, int r, vector<Edge>& g) {
 		for (auto& e : comp) in[uf.find(e.b)] = e;
 		in[uf.find(inEdge.b)] = inEdge;
 	}
-	REP(i,0,n) par[i] = in[i].a;
+	rep(i,0,n) par[i] = in[i].a;
 	return {res, par};
 }
