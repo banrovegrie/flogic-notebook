@@ -2,64 +2,83 @@
  * Author: Benjamin Qi, Oleksandr Kulkov, chilli
  * Date: 2020-01-12
  * License: CC0
- * Source: https://codeforces.com/blog/entry/53170, https://github.com/bqi343/USACO/blob/master/Implementations/content/graphs%20(12)/Trees%20(10)/HLD%20(10.3).h
- * Description: Decomposes a tree into vertex disjoint heavy paths and light
- * edges such that the path from any leaf to the root contains at most log(n)
- * light edges. Code does additive modifications and max queries, but can
- * support commutative segtree modifications/queries on paths and subtrees.
- * Takes as input the full adjacency list. VALS\_EDGES being true means that
- * values are stored in the edges, as opposed to the nodes. All values
- * initialized to the segtree default. Root must be 0.
- * Time: O((\log N)^2)
+ * Source: Path updates and Query in a Tree. Get Segment Tree first.
+ * Time: O(logN * Time taken by Range Query DS)
  * Status: stress-tested against old HLD
  */
 #pragma once
 
-#include "../data-structures/LazySegmentTree.h"
-
-template <bool VALS_EDGES> struct HLD {
-	int N, tim = 0;
-	vector<VI> adj;
-	VI par, siz, depth, rt, pos;
-	Node *tree;
-	HLD(vector<VI> adj_)
-		: N(SZ(adj_)), adj(adj_), par(N, -1), siz(N, 1), depth(N),
-		  rt(N),pos(N),tree(new Node(0, N)){ dfsSz(0); dfsHld(0); }
-	void dfsSz(int v) {
-		if (par[v] != -1) adj[v].erase(find(ALL(adj[v]), par[v]));
-		for (int& u : adj[v]) {
-			par[u] = v, depth[u] = depth[v] + 1;
-			dfsSz(u);
-			siz[v] += siz[u];
-			if (siz[u] > siz[adj[v][0]]) swap(u, adj[v][0]);
-		}
-	}
-	void dfsHld(int v) {
-		pos[v] = tim++;
-		for (int u : adj[v]) {
-			rt[u] = (u == adj[v][0] ? rt[v] : u);
-			dfsHld(u);
-		}
-	}
-	template <class B> void process(int u, int v, B op) {
-		for (; rt[u] != rt[v]; v = par[rt[v]]) {
-			if (depth[rt[u]] > depth[rt[v]]) swap(u, v);
-			op(pos[rt[v]], pos[v] + 1);
-		}
-		if (depth[u] > depth[v]) swap(u, v);
-		op(pos[u] + VALS_EDGES, pos[v] + 1);
-	}
-	void modifyPath(int u, int v, int val) {
-		process(u, v, [&](int l, int r) { tree->add(l, r, val); });
-	}
-	int queryPath(int u, int v) { // Modify depending on problem
-		int res = -1e9;
-		process(u, v, [&](int l, int r) {
-				res = max(res, tree->query(l, r));
-		});
-		return res;
-	}
-	int querySubtree(int v) { // modifySubtree is similar
-		return tree->query(pos[v] + VALS_EDGES, pos[v] + siz[v]);
-	}
+// requires a segment tree with init function
+class HLD {
+    SegmentTrees sgt; vector<vi> adj;
+    vi sz, par, head, sc, st, ed;
+    int t, n;
+public:
+    HLD(vector<vector<int>> &adj1,int n1): sz(n1+1), par(n1+1),
+			 head(n1+1), sc(n1+1), st(n1+1), ed(n1+1) {
+        n = n1; adj = adj1; t = 0;
+    }
+    void dfs_sz(int x,int p = 0) {
+        sz[x] = 1; par[x] = p; head[x] = x;
+        for(auto nx : adj[x]) {
+            if(nx == p) continue;
+            dfs_sz(nx, x);
+            sz[x] += sz[nx];
+            if(sz[nx] > sz[sc[x]]) sc[x] = nx;
+        }
+    }
+    void dfs_hld(int x,int p = 0) {
+        st[x] = t++;
+        if(sc[x]) {
+            head[sc[x]] = head[x];
+            dfs_hld(sc[x], x);
+        }
+        for(auto nx : adj[x]) {
+            if(nx == p or nx == sc[x]) continue;
+            dfs_hld(nx, x);
+        }
+        ed[x] = t - 1;
+    }
+    void build(int base = 1) {
+        dfs_sz(base);
+        dfs_hld(base);
+        sgt.init(t);
+    }   
+    bool anc(int x,int y) {
+        if(x == 0) return true; if(y == 0) return false;
+        return (st[x] <= st[y] and ed[x] >= ed[y]);
+    }
+    int lca(int x,int y) {
+        if(anc(x, y)) return x; if(anc(y, x)) return y;
+        while(!anc(par[head[x]], y)) x = par[head[x]];
+        while(!anc(par[head[y]], x)) y = par[head[y]];
+        x = par[head[x]]; y = par[head[y]];
+        // one will overshoot the lca and the other will reach lca.
+        return anc(x, y) ? y : x;
+    }
+    void update_up(int x,int p,ll add) {
+        while(head[x] != head[p]) {
+            sgt.update(st[head[x]], st[x], add, 0, t-1);
+            x = par[head[x]];
+        }
+        sgt.update(st[p], st[x], add, 0, t - 1);
+    }
+    void range_update(int u,int v,T add) {
+        int l =  lca(u, v);
+        update_up(u, l, add); update_up(v, l, add);
+        update_up(l, l, -add);
+    }
+    T query_up(int x,int p) {
+        T ans = 0;
+        while(head[x] != head[p]) {
+            ans = min(ans, sgt.query(st[head[x]], st[x], 0, t-1));
+            x = par[head[x]];
+        }
+        ans = min(ans, sgt.query(st[p], st[x], 0, t - 1));
+        return ans;
+    }
+    T range_min(int u,int v) {
+        int l = lca(u, v);
+        return min(query_up(u, l), query_up(v, l));
+    }
 };
