@@ -3,10 +3,12 @@
  * Date: 2019-04-26
  * License: CC0
  * Source: https://cp-algorithms.com/graph/dinic.html
- * Description: Complexity: (1) O(V^2*E): General (2) O(Flow * E): General
- * (3) O(E*root(V)): when sum of edge capacities is O(n), we can treat edge 
- *	with weight x as x edges with weight 1.
- * (4) O(E*V*log(Flow)): Dinics with scaling
+ * Description: Complexity: (1) O($V^2 E$): General 
+ * (2) O($\text{Flow} E$): General
+ * (3) O($E \sqrt{V}$): when sum of edge capacities 
+ * is O($n$), we can treat edge with weight $x$ as $x$ 
+ * edges with weight 1.
+ * (4) O($E V \log(Flow)$): Dinics with scaling
  * Status: Tested on SPOJ FASTFLOW and SPOJ MATCHING, stress-tested
  */
 #pragma once

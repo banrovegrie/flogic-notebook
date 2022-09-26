@@ -1,6 +1,7 @@
 /**
  * Author: Benjamin Qi, Oleksandr Kulkov, chilli
  * Date: 2020-01-12
+ * Description: Heavy Light Decomposition
  * License: CC0
  * Source: Path updates and Query in a Tree. Get Segment Tree first.
  * Time: O(logN * Time taken by Range Query DS)

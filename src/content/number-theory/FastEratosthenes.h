@@ -19,10 +19,10 @@
 
 const int LIM = 1e6;
 bitset<LIM> isPrime;
-VI eratosthenes() {
+vi eratosthenes() {
 	const int S = (int)round(sqrt(LIM)), R = LIM / 2;
-	VI pr = {2}, sieve(S+1); pr.reserve(int(LIM/log(LIM)*1.1));
-	vector<PII> cp;
+	vi pr = {2}, sieve(S+1); pr.reserve(int(LIM/log(LIM)*1.1));
+	vector<pii> cp;
 	for (int i = 3; i <= S; i += 2) if (!sieve[i]) {
 		cp.push_back({i, i * i / 2});
 		for (int j = i * i; j <= S; j += 2 * i) sieve[j] = 1;
@@ -31,7 +31,7 @@ VI eratosthenes() {
 		array<bool, S> block{};
 		for (auto &[p, idx] : cp)
 			for (int i=idx; i < S+L; idx = (i+=p)) block[i-L] = 1;
-		REP(i,0,min(S, R - L))
+		rep(i,0,min(S, R - L))
 			if (!block[i]) pr.push_back((L + i) * 2 + 1);
 	}
 	for (int i : pr) isPrime[i] = 1;

@@ -1,3 +1,9 @@
+/**
+ * Author: Amul
+ * Description: Creates a auxiliary tree of $k$ nodes.
+ * Time: $O(k)$
+ */
+
 #pragma once
 
 using vvi = vector<vector<int>>
