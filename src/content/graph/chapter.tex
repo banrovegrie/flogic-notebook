@@ -36,7 +36,8 @@
 	\kactlimport{DirectedMST.h}
 	\kactlimport{HLD.h}
 	\kactlimport{CentroidDecomposition.h}
-% TODO: Blossom and Auxilary Trees
+	\kactlimport{AuxiliaryTrees.h}
+% TODO: Blossom
 
 \section{Math}
 \textbf{Number of Spanning Trees}
@@ -47,12 +48,6 @@ Create an $N\times N$ matrix \texttt{mat}, and for each edge $a \rightarrow b \i
 \texttt{mat[a][b]--, mat[b][b]++} (and \texttt{mat[b][a]--, mat[a][a]++} if $G$ is undirected).
 Remove the $i$th row and column and take the determinant; this yields the number of directed spanning trees rooted at $i$
 (if $G$ is undirected, remove any row/column).
-
-\textbf{Erdős–Gallai theorem}
-% Source: https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93Gallai_theorem
-% Test: stress-tests/graph/erdos-gallai.cpp
-A simple graph with node degrees $d_1 \ge \dots \ge d_n$ exists iff $d_1 + \dots + d_n$ is even and for every $k = 1\dots n$,
-\[ \sum _{i=1}^{k}d_{i}\leq k(k-1)+\sum _{i=k+1}^{n}\min(d_{i},k). \]
 
 \textbf{Mirsky's Theorem} Max length chain is equal to min partitioning into antichains. Max chain is height of poset.
 
@@ -71,5 +66,3 @@ A simple graph with node degrees $d_1 \ge \dots \ge d_n$ exists iff $d_1 + \dots
 \textbf{Kirchhoff's Theorem}. For a multigraph $G$ with no loops, define Laplacian matrix as $L = D - A$. $D$ is a diagonal matrix with $D_{i, i} = deg(i)$, and $A$ is an adjacency matrix. If you remove any row and column of $L$, the determinant gives a number of spanning trees.
 
 \textbf{Brook's Theorem} If a graph is not a complete graph or an odd cycle then it can be coloured with max degree \# of colours.
-
-\textbf{Turan's Theorem} A graph without $K_{r+1}$ and N verticies can have atmax $\lfloor \frac{N^{2}}{2} * (1 - \frac{1}{r}) \rfloor$ edges. 
