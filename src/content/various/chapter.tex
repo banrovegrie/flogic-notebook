@@ -6,6 +6,7 @@
 	\kactlimport{ConstantIntervals.h}
 
 \section{Misc. algorithms}
+	\kactlimport{Mint.h}
 	\kactlimport{TernarySearch.h}
 	\kactlimport{LIS.h}
 	\kactlimport{FastKnapsack.h}
@@ -31,7 +32,7 @@
 		\item \verb@for (int x = m; x; x=(x-1)&m; {...}@ loops over all subset masks of \texttt{m} (except \texttt{m} itself).
 		\item \verb@c = x&-x, r = x+c; (((r^x) >> 2)/c) | r@ is the next number after \texttt{x} with the same number of bits set.
 	\end{itemize}
-	\subsection{Bitset}
+	\subsection*{Bitset}
 	\begin{itemize}
 		\item \verb@bitset<100> b(5)@ or  \verb@bitset<100> b; b = 23;@.
 		\item b.any(), b.all(), check if any or all bits set to true
@@ -40,6 +41,7 @@
 	
 
 \section{Python}
+	\kactlimport{main.py}
 % \section{Optimization tricks}
 % 	\verb@__builtin_ia32_ldmxcsr(40896);@ disables denormals (which make floats 20x slower near their minimum value).
 % 	\subsection{Pragmas}

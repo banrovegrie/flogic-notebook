@@ -1,5 +1,9 @@
-#pragma once
+/**
+ * Author: Amul
+ * Description: Modular Arithmetic (Integer) for Aditya and Arjo
+ */
 
+#pragma once
 
 template <int32_t MOD>
 struct mint {
