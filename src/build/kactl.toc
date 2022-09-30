@@ -7,42 +7,41 @@
 \contentsline {section}{\numberline {3.4}DFS algorithms}{6}{section.3.4}%
 \contentsline {section}{\numberline {3.5}Coloring}{7}{section.3.5}%
 \contentsline {section}{\numberline {3.6}Heuristics}{7}{section.3.6}%
-\contentsline {section}{\numberline {3.7}Trees}{8}{section.3.7}%
+\contentsline {section}{\numberline {3.7}Trees}{7}{section.3.7}%
 \contentsline {section}{\numberline {3.8}Math}{10}{section.3.8}%
 \contentsline {chapter}{\numberline {4}Strings}{10}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Number theory}{12}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Modular arithmetic}{12}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Primality}{13}{section.5.2}%
+\contentsline {chapter}{\numberline {5}Number theory}{11}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Modular arithmetic}{11}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Primality}{12}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Divisibility}{13}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Fractions}{13}{section.5.4}%
 \contentsline {section}{\numberline {5.5}Pythagorean Triples}{13}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Primes}{14}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Estimates}{14}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Mobius Function}{14}{section.5.8}%
-\contentsline {chapter}{\numberline {6}Combinatorics}{14}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Permutations}{14}{section.6.1}%
+\contentsline {section}{\numberline {5.6}Primes}{13}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Estimates}{13}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Mobius Function}{13}{section.5.8}%
+\contentsline {chapter}{\numberline {6}Combinatorics}{13}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Permutations}{13}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Partitions and subsets}{14}{section.6.2}%
 \contentsline {section}{\numberline {6.3}General purpose numbers}{14}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Probability theory}{15}{section.6.4}%
-\contentsline {chapter}{\numberline {7}Algebra}{15}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Equations and Generating Functions}{15}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Polynomials and recurrences}{16}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Optimization}{16}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Matrices}{17}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Fourier transforms}{18}{section.7.5}%
-\contentsline {chapter}{\numberline {8}Geometry}{19}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Basics}{19}{section.8.1}%
+\contentsline {section}{\numberline {6.4}Probability theory}{14}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Algebra}{14}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Equations and Generating Functions}{14}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Polynomials and recurrences}{15}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Optimization}{15}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Matrices}{16}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Fourier transforms}{17}{section.7.5}%
+\contentsline {chapter}{\numberline {8}Geometry}{18}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Basics}{18}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Geometric primitives}{19}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Circles}{21}{section.8.3}%
-\contentsline {section}{\numberline {8.4}Polygons}{21}{section.8.4}%
-\contentsline {section}{\numberline {8.5}Misc. Point Set Problems}{22}{section.8.5}%
-\contentsline {section}{\numberline {8.6}3D}{23}{section.8.6}%
+\contentsline {section}{\numberline {8.3}Circles}{20}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Polygons}{20}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Misc. Point Set Problems}{21}{section.8.5}%
+\contentsline {section}{\numberline {8.6}3D}{22}{section.8.6}%
 \contentsline {chapter}{\numberline {9}Various}{23}{chapter.9}%
 \contentsline {section}{\numberline {9.1}Intervals}{23}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Misc. algorithms}{24}{section.9.2}%
+\contentsline {section}{\numberline {9.2}Misc. algorithms}{23}{section.9.2}%
 \contentsline {section}{\numberline {9.3}Dynamic programming}{24}{section.9.3}%
-\contentsline {section}{\numberline {9.4}XOR Basis}{25}{section.9.4}%
-\contentsline {section}{\numberline {9.5}Bit hacks}{25}{section.9.5}%
-\contentsline {subsection}{\numberline {9.5.1}Bitset}{25}{subsection.9.5.1}%
-\contentsline {section}{\numberline {9.6}Python}{25}{section.9.6}%
+\contentsline {section}{\numberline {9.4}XOR Basis}{24}{section.9.4}%
+\contentsline {section}{\numberline {9.5}Bit hacks}{24}{section.9.5}%
+\contentsline {section}{\numberline {9.6}Python}{24}{section.9.6}%
 \contentsfinish 

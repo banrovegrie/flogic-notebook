@@ -1,6 +1,6 @@
 /**
  * Author: Amul Agrawal
- * Description: Getting different convulations
+ * Description: Getting different convolutiona
  * Time: O(n*2^n)
  */
 #pragma once
