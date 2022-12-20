@@ -1,7 +1,7 @@
 This is the ICPC 2021 Notebook Template for IIITH team `Fuck Logic`.
 
 Team Members:
-1. Aditya Verma (Aditya)
+1. Aditya Verma (Verma)
 2. Amul Agrawal (Amul)
 3. Alapan Chaudhuri (Arjo)
 
